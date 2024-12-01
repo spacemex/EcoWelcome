@@ -33,6 +33,11 @@ public final class EcoWelcome extends JavaPlugin implements Listener, CommandExe
         }
         Bukkit.getPluginManager().registerEvents(this, this);
         Objects.requireNonNull(getCommand("ecowelcomereload")).setExecutor(this);
+
+        getLogger().info("Checking EcoWelcome Config.yml...");
+        getConfigMessage("non-first-time-join","&bWelcome back, %player%!");
+        getConfigMessage("first-time-join","&b%player%, Joined for the first time!");
+        getLogger().info("Finished Checking Config.yml");
     }
 
     @Override
