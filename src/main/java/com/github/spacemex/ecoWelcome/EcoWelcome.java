@@ -67,19 +67,45 @@ public final class EcoWelcome extends JavaPlugin implements Listener, CommandExe
         }
     }
 
-    private String getConfigMessage(String path,String def){
-        if (getConfig().getString(path) == null) {
-            getLogger().warning("Config Key: " + path  + " is missing or corrupted - Remaking it with default value: " + def);
-            getConfig().set(path,def);
+    private String getConfigMessage(String path, String def) {
+        // Check if the key/path is missing
+        if (!getConfig().isSet(path)) {
+            getLogger().warning("Config Key: " + path + " is missing. Regenerating with default: " + def);
+            getConfig().set(path, def);
             saveConfig();
-            return ChatColor.translateAlternateColorCodes('&',def);
+            return ChatColor.translateAlternateColorCodes('&', def);
         }
-        String message = Objects.requireNonNull(getConfig().getString(path));
-        if (stringCheck(message)){
-            return "";
+
+        // Check if the configuration is available
+        if (getConfig().getRoot() == null || getConfig().getKeys(false).isEmpty()) {
+            getLogger().warning("Configuration is missing or very likely corrupted. Regenerating config.yml from defaults.");
+            saveResource("config.yml", true);
+            reloadConfig();
+            return ChatColor.translateAlternateColorCodes('&', def);
         }
-            return ChatColor.translateAlternateColorCodes('&', getConfig().getString(path,def));
+
+        // Check if the key is missing, without automatically regenerating it
+        if (!getConfig().contains(path)) {
+            getLogger().warning("Config Key: " + path + " is missing. Regenerating with default: " + def);
+            getConfig().set(path, def);
+            saveConfig();
+            return ChatColor.translateAlternateColorCodes('&', def);
+        }
+
+        // At this point, the path exists. Retrieve and verify its content.
+        String message = getConfig().getString(path);
+        if (message == null) {
+            // This means the key exists, but the value is null, add default (not overwriting blank)
+            message = def;
+            getConfig().set(path, def);
+            saveConfig();
+            getLogger().info("Config Key: " + path + " was null. Set to default: " + def);
+        }
+
+        // A blank value interpreted as an intentional user setting to disable the message
+        return ChatColor.translateAlternateColorCodes('&', message);
     }
+
     private boolean stringCheck(String string){
         return string.isBlank();
     }
@@ -95,6 +121,8 @@ public final class EcoWelcome extends JavaPlugin implements Listener, CommandExe
                 }
             }
             reloadConfig();
+            getConfigMessage("non-first-time-join","&bWelcome back, %player%!");
+            getConfigMessage("first-time-join","&b%player%, Joined for the first time!");
             sender.sendMessage("Config Reloaded");
             return true;
         }
