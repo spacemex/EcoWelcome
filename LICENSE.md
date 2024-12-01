@@ -6,4 +6,4 @@ Permission is granted to use the plugins provided under this license for persona
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
 
-For inquiries regarding commercial use or distribution, please contact: `yourname [at] domain [dot] com` with the subject line "<Plugin Name> License Inquiry".
+For inquiries regarding commercial use or distribution, please contact: `EcoSuitePlugins [at] gmail [dot] com` with the subject line "<Plugin Name> License Inquiry".
