@@ -10,7 +10,7 @@ EcoWelcome is a simple, lightweight plugin for welcoming new and returning playe
 - [Permissions](#permissions)
 - [Configuration](#configuration)
 - [License](#license)
-- [Contact](#contact)
+- [Support](#Support)
 
 ## Features
 
@@ -54,3 +54,7 @@ Edit these messages to change how greetings appear to players. Ensure Placeholde
 ## License
 
 EcoWelcome is licensed under the [Space_Mex Plugins License](LICENSE.md).
+
+## Support
+
+For faster support please join our discord Server [Discord](https://discord.gg/4CpNvfZBZN)
