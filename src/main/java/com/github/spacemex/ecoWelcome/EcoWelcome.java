@@ -37,6 +37,7 @@ public final class EcoWelcome extends JavaPlugin implements Listener, CommandExe
         getLogger().info("Checking EcoWelcome Config.yml...");
         getConfigMessage("non-first-time-join","&bWelcome back, %player%!");
         getConfigMessage("first-time-join","&b%player%, Joined for the first time!");
+        reloadConfig();
         getLogger().info("Finished Checking Config.yml");
     }
 
