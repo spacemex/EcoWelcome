@@ -1,0 +1,4 @@
+# All Messages Support Placeholder Api  Placeholders
+
+first-time-join: "&b%player%, Joined for the first time!"
+non-first-time-join: "&bWelcome back, %player%!"

@@ -1,0 +1,22 @@
+name: EcoWelcome
+version: '0.1.1-A'
+main: com.github.spacemex.ecoWelcome.EcoWelcome
+api-version: '1.21'
+prefix: EW
+authors: [ Space_Mex ]
+description: A Simple Light Weight Welcome Message Plugin
+website: TBD
+softdepend: ["PlaceholderAPI"]
+permissions:
+  ew.reload:
+    default: op
+    description: Ability To Reload The EcoWelcome Config
+commands:
+  ecowelcomereload:
+    description: Reloads The EcoWelcome Config
+    permission: ew.reload
+    aliases: ewrl
+    permission-message: You do not have permission to use this command
+    usage: /ecowelcomereload
+
+
