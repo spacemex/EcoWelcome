@@ -1,4 +1,7 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=spacemex_EcoWelcome&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=spacemex_EcoWelcome)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=spacemex_EcoWelcome&metric=bugs)](https://sonarcloud.io/summary/new_code?id=spacemex_EcoWelcome)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=spacemex_EcoWelcome&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=spacemex_EcoWelcome)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=spacemex_EcoWelcome&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=spacemex_EcoWelcome)
 # EcoWelcome Plugin
 
 EcoWelcome is a simple, lightweight plugin for welcoming new and returning players on your Minecraft server. It supports integration with PlaceholderAPI for personalized messages.
@@ -59,3 +62,6 @@ EcoWelcome is licensed under the [Space_Mex Plugins License](LICENSE.md).
 ## Support
 
 For faster support please join our discord Server [Discord](https://discord.gg/4CpNvfZBZN)
+
+[![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-light.svg)](https://sonarcloud.io/summary/new_code?id=spacemex_EcoWelcome)
+
