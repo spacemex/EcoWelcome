@@ -11,6 +11,9 @@ permissions:
   ew.reload:
     default: op
     description: Ability To Reload The EcoWelcome Config
+  ew.silent:
+    default: false
+    description: Allows the user to join silently
 commands:
   ecowelcomereload:
     description: Reloads The EcoWelcome Config
@@ -18,5 +21,3 @@ commands:
     aliases: ewrl
     permission-message: You do not have permission to use this command
     usage: /ecowelcomereload
-
-
