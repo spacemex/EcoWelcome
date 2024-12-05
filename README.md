@@ -21,6 +21,7 @@ EcoWelcome is a simple, lightweight plugin for welcoming new and returning playe
 - Send customizable join messages for first-time and returning players.
 - Support for PlaceholderAPI for advanced placeholder replacements.
 - Easy-to-use command to reload configuration on the fly.
+- Permission based silent join
 
 ## Installation
 
@@ -41,6 +42,9 @@ EcoWelcome is a simple, lightweight plugin for welcoming new and returning playe
 - `ew.reload`
     - **Default**: OP
     - **Description**: Allows the user to reload the EcoWelcome configuration.
+- `ew.silent`
+  - **Default**: FALSE
+  - **Description**: Allows the user to join silently
 
 ## Configuration
 
