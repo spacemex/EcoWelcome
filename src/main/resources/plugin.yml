@@ -1,5 +1,5 @@
 name: EcoWelcome
-version: '0.1.1-A'
+version: '0.1.1-R'
 main: com.github.spacemex.ecoWelcome.EcoWelcome
 api-version: '1.21'
 prefix: EW
