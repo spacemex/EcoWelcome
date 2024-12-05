@@ -43,11 +43,17 @@ public final class EcoWelcome extends JavaPlugin implements Listener, CommandExe
 
     @Override
     public void onDisable() {
-        getLogger().warning("EcoWelcome Shutting Down :(");
+        getLogger().warning("EcoWelcome Shutting Down, Goodbye World");
     }
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onJoin(PlayerJoinEvent event){
+
+        if (event.getPlayer().hasPermission("ew.silent")){
+            event.setJoinMessage(null);
+            return;
+        }
+
         String regularJoin = getConfigMessage("non-first-time-join","&bWelcome back, %player%!");
         String firstTime = getConfigMessage("first-time-join","&b%player%, Joined for the first time!");
 
