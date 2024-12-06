@@ -5,7 +5,7 @@ api-version: '1.21'
 prefix: EW
 authors: [ Space_Mex ]
 description: A Simple Light Weight Welcome Message Plugin
-website: TBD
+website: https://www.spigotmc.org/resources/ecowelcome.121166/
 softdepend: ["PlaceholderAPI"]
 permissions:
   ew.reload:
